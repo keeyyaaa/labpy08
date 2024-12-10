@@ -205,3 +205,4 @@ def ubah(self, nama, nilai_baru):
 ![foto]()
 
 ## Hasil output code program praktikum 08
+![foto](https://github.com/keeyyaaa/labpy08/blob/f47a6389cbad023d99dd161955bad282246ecccf/output%20code.png)
