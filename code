@@ -1,0 +1,78 @@
+
+class Mahasiswa:
+    def __init__(self):
+        self.data_mahasiswa = []
+
+    def tambah(self, nama, nilai):
+        """
+        Method untuk menambah data mahasiswa.
+        :param nama: Nama mahasiswa (string).
+        :param nilai: Nilai mahasiswa (int/float).
+        """
+        self.data_mahasiswa.append({'nama': nama, 'nilai': nilai})
+        print(f"Data mahasiswa {nama} berhasil ditambahkan.")
+
+    def tampilkan(self):
+        """
+        Method untuk menampilkan data mahasiswa.
+        """
+        if not self.data_mahasiswa:
+            print("Tidak ada data mahasiswa.")
+            return
+        print("\nDaftar Nilai Mahasiswa:")
+        for mhs in self.data_mahasiswa:
+            print(f"Nama: {mhs['nama']}, Nilai: {mhs['nilai']}")
+
+    def hapus(self, nama):
+        """
+        Method untuk menghapus data mahasiswa berdasarkan nama.
+        :param nama: Nama mahasiswa yang akan dihapus (string).
+        """
+        self.data_mahasiswa = [mhs for mhs in self.data_mahasiswa if mhs['nama'] != nama]
+        print(f"Data mahasiswa {nama} berhasil dihapus.")
+
+    def ubah(self, nama, nilai_baru):
+        """
+        Method untuk mengubah nilai mahasiswa berdasarkan nama.
+        :param nama: Nama mahasiswa yang akan diubah (string).
+        :param nilai_baru: Nilai baru mahasiswa (int/float).
+        """
+        for mhs in self.data_mahasiswa:
+            if mhs['nama'] == nama:
+                mhs['nilai'] = nilai_baru
+                print(f"Data mahasiswa {nama} berhasil diubah menjadi nilai {nilai_baru}.")
+                return
+        print(f"Data mahasiswa {nama} tidak ditemukan.")
+
+# Program utama
+if __name__ == "__main__":
+    daftar_mahasiswa = Mahasiswa()
+
+    while True:
+        print("\nMenu:")
+        print("1. Tambah Data Mahasiswa")
+        print("2. Tampilkan Data Mahasiswa")
+        print("3. Hapus Data Mahasiswa")
+        print("4. Ubah Data Mahasiswa")
+        print("5. Keluar")
+        
+        pilihan = input("Pilih menu (1-5): ")
+        
+        if pilihan == '1':
+            nama = input("Masukkan nama mahasiswa: ")
+            nilai = float(input("Masukkan nilai mahasiswa: "))
+            daftar_mahasiswa.tambah(nama, nilai)
+        elif pilihan == '2':
+            daftar_mahasiswa.tampilkan()
+        elif pilihan == '3':
+            nama = input("Masukkan nama mahasiswa yang ingin dihapus: ")
+            daftar_mahasiswa.hapus(nama)
+        elif pilihan == '4':
+            nama = input("Masukkan nama mahasiswa yang ingin diubah: ")
+            nilai_baru = float(input("Masukkan nilai baru: "))
+            daftar_mahasiswa.ubah(nama, nilai_baru)
+        elif pilihan == '5':
+            print("Keluar dari program.")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan coba lagi.")
