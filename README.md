@@ -6,7 +6,7 @@ Nim: 312410554
 
 Kelas: TI.24.A.5
 
-## Codingan praktikum08 
+## Code program praktikum08 
 
 ```python
 class Mahasiswa:
@@ -195,3 +195,13 @@ def ubah(self, nama, nilai_baru):
 `print(...)`: Menampilkan pesan konfirmasi bahwa data mahasiswa telah berhasil diubah.
 
 `print(...)`: Jika tidak ditemukan
+
+## Flowchart 
+
+![foto]()
+
+## Diagram class
+
+![foto]()
+
+## Hasil output code program praktikum 08
