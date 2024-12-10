@@ -202,7 +202,7 @@ def ubah(self, nama, nilai_baru):
 
 ## Diagram class
 
-![foto]()
+![foto](https://github.com/keeyyaaa/labpy08/blob/1757236f2edafd37c4426d1fded05e45bc888d10/diagram.png)
 
 ## Hasil output code program praktikum 08
 ![foto](https://github.com/keeyyaaa/labpy08/blob/f47a6389cbad023d99dd161955bad282246ecccf/output%20code.png)
