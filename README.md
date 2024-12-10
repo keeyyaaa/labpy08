@@ -198,7 +198,7 @@ def ubah(self, nama, nilai_baru):
 
 ## Flowchart 
 
-![foto]()
+![foto](https://github.com/keeyyaaa/labpy08/blob/2ea6ab480619ecd0e6acf7b6b7c238139b09a14a/fc.png)
 
 ## Diagram class
 
